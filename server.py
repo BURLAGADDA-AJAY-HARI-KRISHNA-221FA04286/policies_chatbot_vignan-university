@@ -266,3 +266,4 @@ async def ask(request: Request):
         return JSONResponse({"answer": answer})
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
+
