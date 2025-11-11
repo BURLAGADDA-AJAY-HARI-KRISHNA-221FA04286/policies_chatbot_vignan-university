@@ -7,9 +7,9 @@ from google import genai
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-# 🌍 Load API key and Environment Variables
-load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+# 🌍 Load API key securely from Streamlit Secrets
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # --- Constants ---
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
